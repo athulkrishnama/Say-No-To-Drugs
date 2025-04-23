@@ -1,0 +1,139 @@
+/* Custom Styles */
+body {
+    margin: 0;  
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    padding: 2rem 1rem; /* Initial padding */
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    backdrop-filter: blur(0px);
+    transition: all 0.6s ease-in-out; /* Smooth transition for all properties */
+  }
+  
+  #navbar.shrink {
+    padding: 1rem 1rem; /* Reduced padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background */
+    backdrop-filter: blur(60px); /* Apply blur on scroll */
+    transform: scale(0.95); /* Slightly shrink the navbar */
+  }
+  
+  .navbar-logo {
+    font-size: 3rem; /* Increased logo size */
+    font-weight: bold;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+  
+  #navbar.shrink .navbar-logo {
+    font-size: 2.5rem; /* Shrink logo size slightly on scroll */
+    transform: scale(0.9); /* Scale down the logo on scroll */
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #9e9e9e; /* Yellow hover effect */
+    transform: scale(1.1);
+  }
+  
+  .navbar-links a:active {
+    transform: scale(0.9);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .navbar-links a {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .navbar-links a:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .navbar-links a:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .navbar-links a:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  
+
+
+  /* banner secion */
+
+  /* Banner section */
+.banner {
+    position: relative;
+    height: 100vh;
+    background: url('./assets/banner.jpg') no-repeat center center/cover;
+    animation: backgroundAnimation 15s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Animation for background shift */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Dark overlay for the background */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+#banner-text{
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+
+  .certificate-cursor {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path fill='black' d='M5 3l4 20 2-2 4 8 2-1-4-8 3-1z'/></svg>"), auto;
+  }
+  
+  .certificate {
+    background-image: 
+      radial-gradient(ellipse at center, rgba(255, 248, 220, 0.7) 0%, rgba(255, 248, 220, 0) 70%),
+      repeating-linear-gradient(45deg, rgba(139, 69, 19, 0.05) 0px, rgba(139, 69, 19, 0.05) 2px, transparent 2px, transparent 4px);
+  }
+  
+  .signature-line {
+    font-family: serif;
+  }
