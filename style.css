@@ -139,3 +139,84 @@ body {
   .signature-line {
     font-family: serif;
   }
+
+
+  .waves {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    transform: rotate(180deg);
+  }
+
+  .waves path {
+    animation: wave 20s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      d: path("M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.16,97.92,114.32,97.28,171.49,85.37S283.09,67.22,321.39,56.44Z");
+    }
+    50% {
+      d: path("M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-58,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z");
+    }
+    100% {
+      d: path("M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.16,97.92,114.32,97.28,171.49,85.37S283.09,67.22,321.39,56.44Z");
+    }
+  }
+
+  /* Social Icons Animation */
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 0 15px rgba(128, 90, 213, 0.4);
+    border-color: #764ba2;
+  }
+
+  /* Footer Content Animation */
+  .footer-content {
+    transition: all 0.5s ease;
+    animation: footerGlow 4s infinite alternate;
+  }
+
+  @keyframes footerGlow {
+    0% {
+      box-shadow: 0 10px 25px rgba(128, 90, 213, 0.05);
+    }
+    100% {
+      box-shadow: 0 10px 25px rgba(128, 90, 213, 0.15);
+    }
+  }
+
+  /* Footer Column Animation */
+  .footer-column h3 {
+    position: relative;
+  }
+
+  .footer-column h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right, #a78bfa, #ec4899);
+    transition: width 0.4s ease;
+  }
+
+  .footer-column:hover h3::after {
+    width: 40%;
+  }
